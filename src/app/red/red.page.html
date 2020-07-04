@@ -1,0 +1,216 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color= "primary">
+    <ion-buttons slot="end" [routerLink]="['/notas']" (click)="showAdMobFreeRewardVideoAds()">
+      <ion-icon name="menu-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title>Calculadora</ion-title>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label class="display" expand="block" >
+      {{ display | number : '.0-8'}}
+    </ion-label>
+    
+  </ion-item>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button  (click)="showAdd()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+    
+  </ion-fab> 
+
+      
+  <ion-grid > 
+    <ion-row>
+      <ion-col size="3">
+        <ion-button
+          (click)="buttonClearClick()"
+          size="large"
+          expand="full">
+          <ion-icon slot="icon-only" name="backspace"></ion-icon>
+        </ion-button>
+      </ion-col>
+      
+      
+      
+    </ion-row>     
+    <ion-row>
+      <ion-col size="3">
+        <ion-button
+          (click)="reset()"
+          size="large"
+          expand="full">
+          AC
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="resetLastNumber()"
+          size="large"
+          expand="full">
+          C
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+        (click)="adPercent('%')"
+          size="large"
+          expand="full">
+          %
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickOperator('/')"
+          size="large"
+          expand="full">
+          /
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickNumber(7)"
+          size="large"
+          expand="full">7</ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickNumber(8)"
+          size="large"
+          expand="full">
+          8
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickNumber(9)"
+          size="large"
+          expand="full">
+          9
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickOperator('*')"
+          size="large"
+          expand="full">
+          <ion-icon size="large" name="close"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickNumber(4)"
+          size="large"
+          expand="full">
+          4
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickNumber(5)"
+          size="large"
+          expand="full">
+          5
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickNumber(6)"
+          size="large"
+          expand="full">
+          6
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickOperator('-')"
+          size="large"
+          expand="full">
+          <ion-icon size="large" name="remove"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  
+    <ion-row>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickNumber(1)"
+          size="large"
+          expand="full">
+          1
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickNumber(2)"
+          size="large"
+          expand="full">
+          2
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickNumber(3)"
+          size="large"
+          expand="full">
+          3
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickOperator('+')"
+          size="large"
+          expand="full">
+          <ion-icon size="large" name="add"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col size="3">
+        <ion-button
+          (click)="changeSign('+/-')"
+          size="large"
+          expand="full"
+          >
+          +/-
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="clickNumber(0)"
+          size="large"
+          expand="full">
+          0
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="setDecimal()"
+          size="large"
+          expand="full">
+          .
+        </ion-button>
+      </ion-col>
+      <ion-col size="3">
+        <ion-button
+          (click)="calculate()"
+          size="large"
+          expand="full">
+          =
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+</ion-content>

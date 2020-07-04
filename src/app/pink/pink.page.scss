@@ -1,0 +1,37 @@
+ion-content {
+    
+    ion-item ion-label {
+    position: relative;
+    height: 50px;
+    font-size: 22px;
+    bottom: -10%;
+    border-style: double;
+    text-align: end;    
+    }
+    ion-fab ion-fab-button {
+        position: relative;
+        bottom: -80px;
+    }
+    --background: rgb(221, 201, 176);
+    
+    ion-grid {
+    position: relative;
+    bottom: 0%;
+
+     ion-row {
+
+        ion-col {
+            ion-button {
+                
+                border: double;
+                border-color: darkblue;
+                
+            }
+
+            
+        }
+      }
+    }
+    
+    
+}

@@ -1,27 +1,36 @@
-#container {
-  text-align: center;
+ion-content {
+    
+    ion-item ion-label {
+    position: relative;
+    height: 50px;
+    font-size: 22px;
+    bottom: -10%;
+    border-style: double;
+    text-align: end;    
+    }
+    ion-fab ion-fab-button {
+        position: relative;
+        bottom: -80px;
+    }
+    --background: rgb(221, 201, 176);
+    
+    ion-grid {
+    position: relative;
+    bottom: 0%;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+     ion-row {
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+        ion-col {
+            ion-button {
+                
+                border: double;
+                border-color: darkblue;
+            }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+            
+        }
+      }
+    }
+    
+    
 }

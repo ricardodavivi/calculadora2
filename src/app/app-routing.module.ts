@@ -11,6 +11,29 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  
+  {
+    path: 'notas',
+    loadChildren: () => import('./notas/notas.module').then( m => m.NotasPageModule)
+  },
+  {
+    path: 'calcu2',
+    loadChildren: () => import('./calcu2/calcu2.module').then( m => m.Calcu2PageModule)
+  },
+  {
+    path: 'red',
+    loadChildren: () => import('./red/red.module').then( m => m.RedPageModule)
+  },
+  {
+    path: 'blue',
+    loadChildren: () => import('./blue/blue.module').then( m => m.BluePageModule)
+  },
+  {
+    path: 'pink',
+    loadChildren: () => import('./pink/pink.module').then( m => m.PinkPageModule)
+  },
+  
+  
 ];
 
 @NgModule({
